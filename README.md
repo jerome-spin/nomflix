@@ -13,3 +13,10 @@ $ npx create-react-app nomflix
 - [ ] TV Shows
 - [ ] Search
 - [ ] Detail
+
+## API Verbs
+
+- [ ] Now playing (Movie)
+- [ ] Top Rated (TV, Movie)
+- [ ] Popular (TV, Movie)
+- [ ] Airing Today (TV)
