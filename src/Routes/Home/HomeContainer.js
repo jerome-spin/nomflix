@@ -11,7 +11,7 @@ export default class extends React.Component {
     loading: true,
   };
 
-  async componentDidMount() {
+  componentDidMount = async () => {
     try {
       const {
         data: { results: nowPlaying },
@@ -23,17 +23,13 @@ export default class extends React.Component {
         data: { results: popular },
       } = await moviesApi.popular();
 
-      this.setState({
-        nowPlaying,
-        upcoming,
-        popular,
-      });
+      this.setState({ nowPlaying, upcoming, popular });
     } catch {
-      this.setState({ error: 'Can not find movies information ' });
+      this.setState({ error: 'Can not find movie information ' });
     } finally {
       this.setState({ loading: false });
     }
-  }
+  };
 
   render() {
     const { nowPlaying, upcoming, popular, error, loading } = this.state;
