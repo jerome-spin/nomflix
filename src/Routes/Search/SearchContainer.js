@@ -46,9 +46,9 @@ export default class extends React.Component {
       <SearchPresenter
         movieResults={movieResults}
         tvResults={tvResults}
+        error={error}
         searchTerm={searchTerm}
         loading={loading}
-        error={error}
         handleSubmit={this.handleSubmit}
       />
     );
