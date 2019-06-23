@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Helmet from 'react-helmet';
 
 import Loader from '../../Components/Loader';
 
@@ -70,9 +71,20 @@ const Overview = styled.p`
 
 const DetailPresenter = ({ result, loading, error }) =>
   loading ? (
-    <Loader />
+    <React.Fragment>
+      <Helmet>
+        <title>Loading | Nomfilx</title>
+      </Helmet>
+      <Loader />
+    </React.Fragment>
   ) : (
     <Container>
+      <Helmet>
+        <title>
+          {result.orginal_title ? result.original_title : result.original_name}{' '}
+          | Nomfilx
+        </title>
+      </Helmet>
       <Backdrop
         bgImage={`https://image.tmdb.org/t/p/original${result.backdrop_path}`}
       />
