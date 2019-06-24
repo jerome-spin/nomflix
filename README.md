@@ -24,3 +24,11 @@ $ npx create-react-app nomflix
 - [x] TV Show Detail
 - [x] Move Detail
 - [x] Search (Tv, Movie)
+
+## Code Challenges
+
+- [ ] IMDB Link
+- [ ] Tabs inside of Movie / Show Details (YT Videos, Production Company & Countries)
+- [ ] Collections Link
+- [ ] /collection Route
+- [ ] On TV Show, show seasons and creators
